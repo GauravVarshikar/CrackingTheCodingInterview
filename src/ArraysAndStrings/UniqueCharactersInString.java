@@ -9,11 +9,13 @@ import java.util.Set;
 public class UniqueCharactersInString {
     public static void main(String[] args) {
         String s = "abcdea";
-        System.out.println("Has Unique Chars: " + hasUniqueChars(s));
+        System.out.println("Has Unique Chars in "+ s+": " + hasUniqueChars(s));
         s = "";
-        System.out.println("Has Unique Chars: " + hasUniqueChars(s));
+        System.out.println("Has Unique Chars in "+ s+": " + hasUniqueChars(s));
         s = "abcdefghijklmnopqrtsuvwxyz";
-        System.out.println("Has Unique Chars: " + hasUniqueChars(s));
+        System.out.println("Has Unique Chars in "+ s+": " + hasUniqueChars(s));
+        s = "abcdefghijklmnopqrtsuvwxyzABC";
+        System.out.println("Has Unique Chars in "+ s+": " + hasUniqueChars(s));
     }
     //BRUTE FORCE - using an additional data structure Set<Character>
     //Time Complexity = O(n)
@@ -30,11 +32,11 @@ public class UniqueCharactersInString {
         return false;
     }
 
-    //Alternative Approach - without using any additional data structure
+    //Alternative BRUTE FORCE Approach - without using any additional data structure
     //Sort the input string, compare current char with previous
     //Time Complexity = O(nlogn)
     //Space Complexity = O(n)
-    private static boolean hasUniqueChars(String str) {
+    private static boolean hasUniqueChars2(String str) {
         if(str.length() <= 1) return false;
 
         char[] charArr = str.toCharArray();
@@ -46,6 +48,22 @@ public class UniqueCharactersInString {
             } else {
                 previousChar = charArr[index];
             }
+        }
+        return false;
+    }
+
+    //Optimal Approach without using additional data structure
+    //Maintain a boolean array of occurrence of any character similar to a Set
+    //Time Complexity = O(n)
+    //Space Complexity = O(1) as we have a constant size of 256 of char array
+    private static boolean hasUniqueChars(String str) {
+        if(str.length() > 256) return false;
+        boolean[] charArr = new boolean[265];
+        for(char ch: str.toCharArray()) {
+            if(charArr[ch]) {
+                return true;
+            }
+            charArr[ch] = true;
         }
         return false;
     }
