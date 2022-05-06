@@ -7,7 +7,7 @@ public class ReplaceSpaceWith {
     public static void main(String[] args) {
         String s = "Mr John Smith    ";
         System.out.println("Replaced " + s + " with : " + replaceSpaceWith(s));
-        s = "Mr Gaurav this is good.        ";
+        s = "Mr Gaurav this works.      ";
         System.out.println("Replaced " + s + " with : " + replaceSpaceWith(s));
     }
 
