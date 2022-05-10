@@ -9,6 +9,9 @@ public class StringRotationCheck {
         String s2 = "rbottlewate";
         System.out.println(s1 + " is rotation of " + s2 + " : " +isRotation(s1, s2));
 
+        //Actual Solution in the book -- which makes us look dumb!
+        System.out.println((s1+s1).contains(s2));
+
         s1 = "eeeeea";
         s2 = "aeeeee";
         System.out.println(s1 + " is rotation of " + s2 + " : " +isRotation(s1, s2));
