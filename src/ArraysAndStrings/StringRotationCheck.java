@@ -36,6 +36,7 @@ public class StringRotationCheck {
             }
             pointer++;
 
+            //if pointer has reached the end of string then reset it to 0
             if(pointer == s1.length()){
                 pointer = 0;
             }
