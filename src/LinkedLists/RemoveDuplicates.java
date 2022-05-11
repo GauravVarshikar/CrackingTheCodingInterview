@@ -17,9 +17,6 @@ public class RemoveDuplicates {
         Node result = removeDuplicates(head);
         Node.printLinkedList(result);
     }
-
-
-
     //Maintain a HashSet of values. If a value already exists in the set then
     //set the prev node's next to current node's next, this will delete the current node
     //if duplicate == prev.next --> curr.next
