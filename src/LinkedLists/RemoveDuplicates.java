@@ -12,19 +12,13 @@ public class RemoveDuplicates {
         head.insert(3); head.insert(3);
         head.insert(4); head.insert(5);
         Node t = head;
-        printLinkedList(t);
+        Node.printLinkedList(t);
         System.out.println();
         Node result = removeDuplicates(head);
-        printLinkedList(result);
+        Node.printLinkedList(result);
     }
 
-    private static void printLinkedList(Node result) {
-        while(result != null) {
-            System.out.print(result.val + "--> ");
-            result = result.next;
-        }
-        System.out.print("null");
-    }
+
 
     //Maintain a HashSet of values. If a value already exists in the set then
     //set the prev node's next to current node's next, this will delete the current node
