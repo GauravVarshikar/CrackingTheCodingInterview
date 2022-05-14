@@ -15,14 +15,16 @@ public class SetOfStacksQuestion {
     public static void main(String[] args) {
         SetOfStacks setOfStacks = new SetOfStacks();
         for(int i=1; i< 111; i++){
-            System.out.println("Pushing: " + i);
+            //System.out.println("Pushing: " + i);
             setOfStacks.push(i);
         }
         setOfStacks.print();
+        System.out.println(setOfStacks.popAt(2));
         for(int i=1; i< 19; i++){
             System.out.println("Popping: " + setOfStacks.pop());
         }
         setOfStacks.print();
+        System.out.println(setOfStacks.popAt(9));
     }
 }
 
@@ -82,9 +84,21 @@ class SetOfStacks {
             // Store the return value
             int result = curStack.pop();
             // After popping if the current stack is empty, decrement the pointer by 1
-            if (curStack.isEmpty()) currentActiveStack--;            return result;
+            if (curStack.isEmpty()) currentActiveStack--;
+            return result;
         }
         return -1;
+    }
+
+    public int popAt(int stackNum) {
+        Stack<Integer> stack = stackList.get(stackNum);
+        if(!stack.isEmpty()) {
+            return stack.pop();
+        }
+        else {
+            System.out.println("Stack at position " + stackNum + " is empty!");
+            return -1;
+        }
     }
 
     public void print(){
