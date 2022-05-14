@@ -91,8 +91,11 @@ class SetOfStacks {
     }
 
     public int popAt(int stackNum) {
+        //Get the stack at the given position
         Stack<Integer> stack = stackList.get(stackNum);
+        //check if the stack is not empty
         if(!stack.isEmpty()) {
+            //pop and return the element
             return stack.pop();
         }
         else {
