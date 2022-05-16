@@ -49,12 +49,12 @@ class SortedStack {
     }
 
     public int pop(){
-        if(!stack.isEmpty()) return stack.pop();
+        if(!stack.isEmpty()) return stack.removeLast();
         else return -1;
     }
 
     public int peek() {
-        if(!stack.isEmpty()) return stack.peek();
+        if(!stack.isEmpty()) return stack.peekLast();
         else return -1;
     }
 
