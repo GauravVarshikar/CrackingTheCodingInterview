@@ -9,7 +9,7 @@ public class CreateBSTFromArray {
         Node.display(root);
     }
 
-    private static Node generateBST(int[] input) {
+    public static Node generateBST(int[] input) {
         return generateBST(input, 0, input.length-1, null);
     }
 
