@@ -79,4 +79,8 @@ public class Node {
             displayR(sb, c + d, r + 2, d / 2, w, n.right, "\\ ");
         }
     }
+
+    public String toString() {
+        return "" + this.value;
+    }
 }
