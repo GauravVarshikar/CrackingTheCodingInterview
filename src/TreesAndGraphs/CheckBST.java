@@ -1,18 +1,19 @@
 package TreesAndGraphs;
 
-import java.sql.SQLOutput;
 import java.util.LinkedList;
 import java.util.Queue;
 
 // Implement a function to check if a binary tree is a binary search tree
 public class CheckBST {
     public static void main(String[] args) {
+        // sorted array
         int[] input = {1,2,3,4,5,6,7,8};
         Node root = CreateBSTFromArray.generateBST(input);
         Node.display(root);
         System.out.println("Is a BST with DFS approach? : " + isBinarySearchTreeDFS(root));
         System.out.println("Is a BST with BFS approach? : " + isBinarySearchTreeBFS(root));
 
+        // unsorted array
         input = new int[]{1,2,3,10,5,6,7,8};
         root = CreateBSTFromArray.generateBST(input);
         Node.display(root);
