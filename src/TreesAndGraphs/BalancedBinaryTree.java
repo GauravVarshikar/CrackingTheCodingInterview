@@ -43,8 +43,6 @@ public class BalancedBinaryTree {
         if(Math.abs(leftHeight-rightHeight) > 1) {
             return false;
         }
-        isBalanced(root.left);
-        isBalanced(root.right);
-        return true;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 }
