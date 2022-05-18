@@ -12,6 +12,10 @@ public class Node {
     public Node(int value) {
         this.value = value;
     }
+
+    public Node() {
+    }
+
     // In-order Traversal
     public static void inOrderTraversal(Node root){
         if(root == null) return;
@@ -51,7 +55,7 @@ public class Node {
     // Ignore these functions - display() and displayR(). These are only used to display the tree
     // Not written by me. Copied from somewhere.
     public static void display(Node root) {
-        final int height = 3, width = 20;
+        final int height = 5, width = 30;
         int len = width * height * 2;
         StringBuilder sb = new StringBuilder(len);
         for (int i = 1; i <= len; i++)
