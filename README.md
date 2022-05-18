@@ -1,5 +1,5 @@
 # CrackingTheCodingInterview
-Solutions to problems in the Cracking the Coding Interview book Fifth (5th) Edition.
+Solutions to the problems in the book - Cracking the Coding Interview Fifth (5th) Edition.
 
 Useful For:
   <li> Developers who want to learn DSA </li>
