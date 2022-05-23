@@ -38,7 +38,7 @@ public class CheckIfSubtree {
         // If node not found in the tree, return null
         if(left == null && right == null) return null;
         // If left node is not null, return the left node else return right node
-        return left == null? right : left;
+        return left != null? left : right;
     }
 
     // Function to compare two trees starting from a root node
